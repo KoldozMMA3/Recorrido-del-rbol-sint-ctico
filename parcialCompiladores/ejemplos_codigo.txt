@@ -1,0 +1,50 @@
+entrada = [
+    {"simbolo": "INICIO_PROCESO", "lexema": "INICIO_PROCESO", "nroline": 1, "col": 1},
+    {"simbolo": "LLAVE_ABRE", "lexema": "{", "nroline": 1, "col": 51},
+    {"simbolo": "MIENTRAS", "lexema": "MIENTRAS", "nroline": 1, "col": 14},
+    {"simbolo": "PARENTESIS_ABRE", "lexema": "(", "nroline": 1, "col": 21},
+    {"simbolo": "IDENTIFICADOR", "lexema": "IDENTIFICADOR", "nroline": 1, "col": 22},
+    {"simbolo": "OP_SUMA", "lexema": "OP_SUMA", "nroline": 1, "col": 35},
+    {"simbolo": "IDENTIFICADOR", "lexema": "IDENTIFICADOR", "nroline": 1, "col": 36},
+    {"simbolo": "PARENTESIS_CIERRA", "lexema": ")", "nroline": 1, "col": 49},
+    {"simbolo": "LLAVE_ABRE", "lexema": "{", "nroline": 1, "col": 51},
+    {"simbolo": "LLAVE_CIERRA", "lexema": "}", "nroline": 1, "col": 61},
+    {"simbolo": "LLAVE_CIERRA", "lexema": "}", "nroline": 1, "col": 61},
+    {"simbolo": "FIN_PROCESO", "lexema": "FIN_PROCESO", "nroline": 1, "col": 71},
+    {"simbolo": "$", "lexema": "$", "nroline": 0, "col": 0},
+]
+
+Funciona
+
+entrada = [
+    {"simbolo": "INICIO_PROCESO", "lexema": "INICIO_PROCESO", "nroline": 1, "col": 1},
+    {"simbolo": "LLAVE_ABRE", "lexema": "LLAVE_ABRE", "nroline": 1, "col": 1},
+    {"simbolo": "IMPRESOR", "lexema": "IMPRESOR", "nroline": 1, "col": 15},
+    {"simbolo": "CADENA_TEXTO", "lexema": "Hola, Mundo!", "nroline": 1, "col": 24},
+    {"simbolo": "LLAVE_CIERRA", "lexema": "LLAVE_CIERRA", "nroline": 1, "col": 1},
+    {"simbolo": "FIN_PROCESO", "lexema": "FIN_PROCESO", "nroline": 1, "col": 39},
+    {"simbolo": "$", "lexema": "$", "nroline": 0, "col": 0},
+]
+
+
+INICIO_PROCESO LLAVE_ABRE IMPRESOR CADENA_TEXTO LLAVE_CIERRA FIN_PROCESO FUNC
+
+EJEMPLO 
+
+FUNCION suma_numeros(a, b) {
+    ENTERO resultado
+    resultado = a + b
+    IMPRIMIR resultado
+}
+
+main() {
+    ENTERO x
+    ENTERO y
+    x = 5
+    y = 7
+    suma_numeros(x, y)
+}
+
+GRAMATICA:
+
+FUNCION IDENTIFICADOR PARENTESIS_ABRE DATO_ENTERO IDENTIFICADOR COMA DATO_ENTERO IDENTIFICADOR PARENTESIS_CIERRA LLAVE_ABRE DATO_ENTERO IDENTIFICADOR IGUALDAD NUM_ENTERO OP_SUMA NUM_ENTERO IMPRESOR IDENTIFICADOR LLAVE_CIERRA INICIO_PROCESO LLAVE_ABRE DATO_ENTERO IDENTIFICADOR IGUALDAD NUM_ENTERO DATO_ENTERO IDENTIFICADOR IGUALDAD NUM_ENTERO IDENTIFICADOR PARENTESIS_ABRE DATO_ENTERO IDENTIFICADOR COMA DATO_ENTERO IDENTIFICADOR PARENTESIS_CIERRA LLAVE_CIERRA FIN_PROCESO
